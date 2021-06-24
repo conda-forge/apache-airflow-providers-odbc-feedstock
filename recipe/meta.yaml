@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-odbc" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-odbc-{{ version }}.tar.gz
-  sha256: 5ee62c2e0e268faa34b17ec9d20667d4ac0b8d7042c8c256d0a841c4fcb66747
+  sha256: b01aa33e7618acfa242f4a1985c670cb97974c171f0d7b24661ee9c6cff44e99
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - pyodbc
     - python >=3.6
 
