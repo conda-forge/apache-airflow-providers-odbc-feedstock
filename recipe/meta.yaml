@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-odbc" %}
-{% set version = "2.0.2" %}
-
+{% set version = "2.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-odbc-{{ version }}.tar.gz
-  sha256: 20debc1cd14f71e1b01d2f1531913ec6a964843b5a90b87b568e470d58648e29
+  sha256: 439138c7f9e8ff70938d4d391000a5fe41be33b56090ad8c90ad6454c724c4a7
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -36,9 +35,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for ODBC for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-odbc package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-odbc/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
