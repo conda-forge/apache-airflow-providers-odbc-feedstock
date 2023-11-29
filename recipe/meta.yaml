@@ -34,6 +34,7 @@ test:
     - pip
 
 about:
+  home: https://airflow.apache.org/
   summary: Provider package apache-airflow-providers-odbc for Apache Airflow
   license: Apache-2.0
   license_file: airflow/providers/odbc/LICENSE
