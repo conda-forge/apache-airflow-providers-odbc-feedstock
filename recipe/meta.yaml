@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-odbc" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-odbc-{{ version }}.tar.gz
-  sha256: 955e9de58beab750c3875cc5d8cc524410d5ebdf224bcbc138b34b2a03599775
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_odbc-{{ version }}.tar.gz
+  sha256: d6adcee68bc382de102708fecaa950d2be823095901a40234f026a78898a963b
 
 build:
   noarch: python
@@ -16,19 +16,18 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
-    - apache-airflow-providers-common-sql >=1.3.1
+    - apache-airflow-providers-common-sql >=1.8.1
     - apache-airflow >=2.5.0
     - pyodbc
 
 test:
   imports:
     - airflow.providers.odbc
-    - airflow.providers.odbc.hooks
   commands:
     - pip check
   requires:
@@ -36,11 +35,9 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-odbc package
+  summary: Provider package apache-airflow-providers-odbc for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/odbc/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-odbc/stable/index.html
   dev_url: https://github.com/apache/airflow/
