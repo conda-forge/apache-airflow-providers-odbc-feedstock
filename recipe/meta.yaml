@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-odbc" %}
-{% set version = "4.6.0" %}
+{% set version = "4.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_odbc-{{ version }}.tar.gz
-  sha256: 3c7e166af8508aaa0ba3d612f9a594294c9db6d6299aa8d04e00e6f9e85be663
+  sha256: da569f1ae20b88f73e057ffe590ea2c91b332bb484eb73b59e603b1a7467d67d
 
 build:
   noarch: python
