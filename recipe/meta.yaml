@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-odbc" %}
-{% set version = "4.10.3" %}
+{% set version = "4.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_odbc-{{ version }}.tar.gz
-  sha256: 1d4dc56f5cb8fb03bc6d81bb3f1074ba05599c057089f59bbead5941d47bc2fb
+  sha256: b714fe9891400834e8192f6f863a28ff61358840e2046232737f6148f8be9b4f
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.10.0
+    - apache-airflow >=2.11.0
     - apache-airflow-providers-common-sql >=1.20.0
     # more restrictive for python >=3.13
     - pyodbc >=5.2.0
