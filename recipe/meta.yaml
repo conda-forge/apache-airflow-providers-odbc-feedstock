@@ -24,7 +24,7 @@ requirements:
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-sql >=1.20.0
     # more restrictive for python >=3.13
-    - pyodbc >=5.0.0
+    - pyodbc >=5.2.0
 
 test:
   imports:
