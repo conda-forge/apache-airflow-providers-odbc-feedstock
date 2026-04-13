@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-odbc
-  version: "4.12.1"
+  version: "4.12.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_odbc-${{ version }}.tar.gz
-  sha256: f14ba6c3c9192721a99ec130de6f8673173fe6f6fb06b336d3ce2161b083f8f9
+  sha256: e50bb6dab86caac0196392d1db2a20a37fb6a81b957ccb489510fb2531bcdfc9
 
 build:
   noarch: python
@@ -33,7 +33,9 @@ tests:
       imports:
         - airflow.providers.odbc
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
